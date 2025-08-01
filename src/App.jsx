@@ -8,7 +8,7 @@ import MainLayout from './pages/MainLayout/MainLayout';
 
 function App() {
   const router = createBrowserRouter([{
-    path: 'startFramework',
+    path: '',
     element: <MainLayout />,
     children: [{
       index: true,

@@ -76,7 +76,7 @@ A modern React + Vite starter project featuring modular components, responsive d
    ```
 
 4. **Open in browser:**
-   Visit [http://localhost:5173/startFramework](http://localhost:5173/startFramework)
+   Visit [http://localhost:5173](http://localhost:5173)
 
 ### Build for Production
 
