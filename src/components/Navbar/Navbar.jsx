@@ -43,17 +43,17 @@ export default function Navbar() {
 
           {/* Desktop navigation links */}
           <ul className={`hidden md:flex md:flex-row md:gap-6`}>
-            <li className="flex items-center"><NavLink className='custom-btn' to={'/startFramework/about'}>About</NavLink></li>
-            <li className="flex items-center"><NavLink className='custom-btn' to={'/startFramework/portfolio'}>Portfolio</NavLink></li>
-            <li className="flex items-center"><NavLink className='custom-btn' to={'/startFramework/contact'}>Contact</NavLink></li>
+            <li className="flex items-center"><NavLink className='custom-btn uppercase' to={'/startFramework/about'}>About</NavLink></li>
+            <li className="flex items-center"><NavLink className='custom-btn uppercase' to={'/startFramework/portfolio'}>Portfolio</NavLink></li>
+            <li className="flex items-center"><NavLink className='custom-btn uppercase' to={'/startFramework/contact'}>Contact</NavLink></li>
           </ul>
         </div>
 
         {/* Mobile navigation links  */}
         <ul className={`md:hidden overflow-hidden flex flex-col gap-4  transition-all duration-500 ease-in-out ${showMenu ? 'max-h-60 py-3' : 'max-h-0'}`}>
-          <li><NavLink className='custom-btn' to={'/startFramework/about'}>About</NavLink></li>
-          <li><NavLink className='custom-btn' to={'/startFramework/portfolio'}>Portfolio</NavLink></li>
-          <li><NavLink className='custom-btn' to={'/startFramework/contact'}>Contact</NavLink></li>
+          <li><NavLink className='custom-btn uppercase' to={'/startFramework/about'}>About</NavLink></li>
+          <li><NavLink className='custom-btn uppercase' to={'/startFramework/portfolio'}>Portfolio</NavLink></li>
+          <li><NavLink className='custom-btn uppercase' to={'/startFramework/contact'}>Contact</NavLink></li>
         </ul>
       </Container>
     </nav>
