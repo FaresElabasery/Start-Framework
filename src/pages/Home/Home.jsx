@@ -9,7 +9,7 @@ export default function Home() {
                     <div className="img-container size-60 ">
                         <img className='w-100' src={homeImg} alt="person image" />
                     </div>
-                    <Heading />
+                    <Heading text={'start framework'}/>
                     <p>Graphic Artist - Web Designer - Illustrator</p>
                 </div>
             </Container>
