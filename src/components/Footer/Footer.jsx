@@ -28,9 +28,9 @@ export default function Footer() {
           </div>
         </div>
       </Container>
-        <div className='bg-Cgray-900 text-center text-Cgray-400 py-6 mt-20 w-full'>
-          Copyright &copy; Your Website 2021
-        </div>  
+      <div className='bg-Cgray-900 text-center text-Cgray-400 py-6 mt-20 w-full'>
+        Copyright &copy; Your Website 2021
+      </div>
     </div>
   )
 }
