@@ -1,32 +1,46 @@
 import { useEffect, useState } from 'react';
 import images from '../../utils/images';
+import { ChangeTitle } from '../../utils/title';
 import Card from './../../components/Card/Card';
 import Container from './../../components/Container/Container';
 import Heading from './../../components/Heading/Heading';
 import Modal from './../../components/Modal/Modal';
-import { ChangeTitle } from '../../utils/title';
 
 export default function Portfolio() {
+    // State to track if the modal is open
     const [isModalOpen, setIsModalOpen] = useState(false)
+
+    // State to store the selected image src
     const [img, setImg] = useState('')
+
+    // Convert images object to an array for mapping
     const ArrayImages = Object.entries(images)
+
+    // Close modal if backdrop is clicked
     const handleCloseModal = (e) => {
         if (e.target.classList.contains('modal-backdrop')) {
             setIsModalOpen(false)
         }
     }
+
+    // Find image by name and return its source
     const findImage = (imgName) => ArrayImages.find(([Name, _]) => imgName === Name);
+
+    // Set image src and open modal
     const handleImageModal = (e) => {
         setIsModalOpen(true)
         setImg(() => findImage(e.target.alt)[1])
     }
+
+    // Change page title on mount and reset on unmount
     useEffect(() => {
-      ChangeTitle('Portfolio');
-      return () => {
-        ChangeTitle('Start Framework');
-      }
+        ChangeTitle('Portfolio');
+        return () => {
+            ChangeTitle('Start Framework');
+        }
     }, [])
-    
+
+
 
     return (
         <div className='flex-center flex-col py-20'>
@@ -40,6 +54,7 @@ export default function Portfolio() {
                             </div>
                         ))}
                     </div>
+                    {/* Render modal if isModalOpen is true */}
                     {isModalOpen &&
                         <Modal handleCloseModal={(e) => handleCloseModal(e)} img={img} setIsModalOpen={setIsModalOpen} />}
                 </div>
