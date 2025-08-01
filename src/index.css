@@ -23,8 +23,13 @@
     @apply bg-Cgreen-500 rounded-md
 }
 
+/* helping in respoinsive  */
 .row {
     @apply flex flex-wrap 
+}
+/* center items in middle */
+.flex-center {
+    @apply flex items-center justify-center
 }
 
 /* social links */
