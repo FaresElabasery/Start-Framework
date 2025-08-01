@@ -1,6 +1,5 @@
-import React from 'react'
-import Container from './../../components/Container/Container';
 import { Link } from 'react-router-dom';
+import Container from './../../components/Container/Container';
 
 export default function NoFoundPage() {
   return (
