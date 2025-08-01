@@ -1,9 +1,33 @@
 @import "tailwindcss";
 
+@theme {
+    --color-Cgray-100: #f0f8ff;  /* for font footer */
+    --color-Cgray-200: #212529;  /* for contact   */
+    --color-Cgray-500: #2C3E50;  /* for navbar and part of footer  */
+    --color-Cgray-900: #1A252F;  /* footer  */
+    --color-Cgreen-500: #1ABC9C; /* for home about  */
+}
+/* reusable Compoent */
+
+/* container */
+.container{
+    @apply mx-auto xl:px-32
+}
+
+/* Buttons */
 .custom-btn {
     @apply text-base py-2 px-2 uppercase
 }
 
 .custom-btn.active {
-    @apply bg-teal-500 rounded-md
+    @apply bg-Cgreen-500 rounded-md
+}
+
+.row {
+    @apply flex flex-wrap 
+}
+
+/* social links */
+.social-icons{
+    @apply size-10 border-1 flex items-center justify-center rounded-full  hover:bg-white hover:text-Cgray-500 hover:scale-110 cursor-pointer transition-[scale] duration-200
 }
