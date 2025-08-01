@@ -2,6 +2,8 @@
 import Container from './../../components/Container/Container';
 import Heading from './../../components/Heading/Heading';
 import FloatingInput from './../../components/FloatingInput/FloatingInput';
+import { useEffect } from 'react';
+import { ChangeTitle } from '../../utils/title';
 export default function Contact() {
   // feilds of input for looping 
   const fields = [
@@ -21,6 +23,12 @@ export default function Contact() {
       target.nextElementSibling.children[0].classList.remove('translate-y-0');
     }
   }
+  useEffect(() => {
+    ChangeTitle('Contact');
+    return () => {
+      ChangeTitle('Start Framework');
+    }
+  }, [])
   return (
     <div className="flex-center h-screen">
       <Container>
@@ -28,7 +36,7 @@ export default function Contact() {
           <Heading text='conatct section' color='dark' />
           <div className='w-full md:w-[700px]'>
             {fields.map(({ id, type, label }, i) => (
-              <FloatingInput id={id} type={type} label={label} handleFocus={(e)=>handleFocus(e)} i={i} />
+              <FloatingInput key={i} id={id} type={type} label={label} handleFocus={(e) => handleFocus(e)} />
             ))}
             <button className='custom-btn active cursor-pointer mt-10 me-auto'>send Message</button>
           </div>

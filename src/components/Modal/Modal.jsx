@@ -1,7 +1,13 @@
-import React from 'react'
+import { IoIosCloseCircleOutline } from "react-icons/io";
 
-export default function Modal() {
+export default function Modal({ handleCloseModal, img,setIsModalOpen }) {
   return (
-    <div>Modal</div>
+    <div className='modal-backdrop fixed bg-blue-500/20 inset-0 z-10 flex-center' onClick={(e) => handleCloseModal(e)} >
+      <div className="relative">
+        <img className='px-4 md:w-[600px]' src={img} alt="img 1" />
+        <span className="absolute top-1 right-5 cursor-pointer hover:bg-amber-50 rounded-full flex-center hover:text-Cgray-500 hover:rotate-180 transition-all duration-300" onClick={()=>setIsModalOpen(false)}><IoIosCloseCircleOutline size={30} />
+        </span>
+      </div>
+    </div>
   )
 }

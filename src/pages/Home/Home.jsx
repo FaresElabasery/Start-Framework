@@ -1,6 +1,7 @@
 import homeImg from '../../assets/home.svg';
 import Container from './../../components/Container/Container';
 import Heading from '../../components/Heading/Heading';
+import { Helmet } from 'react-helmet';
 export default function Home() {
     return (
         <div className='flex-center h-[97vh] bg-Cgreen-500'>
@@ -9,10 +10,13 @@ export default function Home() {
                     <div className="img-container size-60 ">
                         <img className='w-100' src={homeImg} alt="person image" />
                     </div>
-                    <Heading text={'start framework'}/>
+                    <Heading text={'start framework'} />
                     <p>Graphic Artist - Web Designer - Illustrator</p>
                 </div>
             </Container>
+            <Helmet>
+                <title>Home</title>
+            </Helmet>
         </div>
     )
 }

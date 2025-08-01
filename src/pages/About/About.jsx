@@ -1,7 +1,15 @@
+import { useEffect } from 'react';
 import Container from './../../components/Container/Container';
 import Heading from './../../components/Heading/Heading';
+import { ChangeTitle } from '../../utils/title';
 
 export default function About() {
+  useEffect(() => {
+    ChangeTitle('About');
+    return () => {
+      ChangeTitle('Start Framework');
+    }
+  }, [])
   return (
     <div className='flex-center h-[97vh] bg-Cgreen-500 '>
       <Container>
