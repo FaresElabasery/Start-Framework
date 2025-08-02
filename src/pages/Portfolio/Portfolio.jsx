@@ -40,8 +40,6 @@ export default function Portfolio() {
         }
     }, [])
 
-
-
     return (
         <div className='flex-center flex-col py-20'>
             <Container>
@@ -56,7 +54,7 @@ export default function Portfolio() {
                     </div>
                     {/* Render modal if isModalOpen is true */}
                     {isModalOpen &&
-                        <Modal handleCloseModal={(e) => handleCloseModal(e)} img={img} setIsModalOpen={setIsModalOpen} />}
+                        <Modal handleCloseModal={(e) => handleCloseModal(e)} img={img} setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />}
                 </div>
             </Container>
         </div>
