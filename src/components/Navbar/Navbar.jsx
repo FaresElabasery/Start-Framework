@@ -3,10 +3,7 @@ import { LuMenu } from "react-icons/lu";
 import { Link, NavLink } from 'react-router-dom';
 import Container from './../Container/Container';
 
-export default function Navbar() {
-  // state to toggle the mobile menu
-  const [showMenu, setShowMenu] = useState(false);
-
+export default function Navbar({showMenu,setShowMenu}) {
   // state to detect if the user has scrolled past a certain poin
   const [hasScrolled, setHasScrolled] = useState(false)
 
