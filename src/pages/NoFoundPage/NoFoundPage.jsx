@@ -1,7 +1,13 @@
 import { Link } from 'react-router-dom';
 import Container from './../../components/Container/Container';
+import { useEffect } from 'react';
+import { ChangeTitle } from '../../utils/title';
 
 export default function NoFoundPage() {
+  useEffect(() => {
+    ChangeTitle('404 Not Found')
+    return () => ChangeTitle('Start Framework')
+  }, [])
   return (
     <div className='flex-center h-screen text-Cgray-200'>
       <Container>
