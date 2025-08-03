@@ -7,7 +7,7 @@ export default function Card({ img, handleImageModal, imgName }) {
         <div className='relative cursor-pointer group'>
 
           <img
-            className='w-100 rounded-lg'
+            className='w-full rounded-lg'
             src={img}
             alt={imgName}
             onClick={(e) => handleImageModal(e)}

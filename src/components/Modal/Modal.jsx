@@ -9,6 +9,16 @@ export default function Modal({ handleCloseModal, img, setIsModalOpen, isModalOp
       setIsModalOpen(false)
   }, [isModalOpen, setIsModalOpen])
 
+  // handle modal be without scroll
+  useEffect(() => {
+    if (isModalOpen)
+      document.body.style.overflow = 'hidden'
+    else
+      document.body.style.overflow = ''
+
+    return () => document.body.style.overflow = '';
+  }, [isModalOpen])
+
   // add event listener to close modal 
   useEffect(() => {
     window.addEventListener('keydown', handleCloseModalEsc)
@@ -19,6 +29,8 @@ export default function Modal({ handleCloseModal, img, setIsModalOpen, isModalOp
     }
   }, [handleCloseModalEsc])
 
+  // if it close remove modal from dom 
+  if (!isModalOpen) return null;
   return (
     <div className='modal-backdrop fixed bg-blue-500/20 inset-0 z-10 flex-center backdrop-blur-sm' onClick={(e) => handleCloseModal(e)} >
       <div className="relative">
