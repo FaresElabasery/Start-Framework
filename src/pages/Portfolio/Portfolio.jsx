@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import images from '../../utils/images';
-import { ChangeTitle } from '../../utils/title';
 import Card from './../../components/Card/Card';
 import Container from './../../components/Container/Container';
 import Heading from './../../components/Heading/Heading';
@@ -31,17 +30,9 @@ export default function Portfolio() {
         setIsModalOpen(true)
         setImg(() => findImage(e.target.alt)[1])
     }
-
-    // Change page title on mount and reset on unmount
-    useEffect(() => {
-        ChangeTitle('Portfolio');
-        return () => {
-            ChangeTitle('Start Framework');
-        }
-    }, [])
-
     return (
         <div className='flex-center flex-col py-20'>
+            <title>Portfolio</title>
             <Container>
                 <div className='flex-center flex-col -mx-5'>
                     <Heading color='dark' text='portfolio component' />

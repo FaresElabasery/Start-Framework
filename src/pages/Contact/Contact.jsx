@@ -1,9 +1,7 @@
 
 import Container from './../../components/Container/Container';
-import Heading from './../../components/Heading/Heading';
 import FloatingInput from './../../components/FloatingInput/FloatingInput';
-import { useEffect } from 'react';
-import { ChangeTitle } from '../../utils/title';
+import Heading from './../../components/Heading/Heading';
 export default function Contact() {
   // feilds of input for looping 
   const fields = [
@@ -23,14 +21,10 @@ export default function Contact() {
       target.nextElementSibling.children[0].classList.remove('translate-y-0');
     }
   }
-  useEffect(() => {
-    ChangeTitle('Contact');
-    return () => {
-      ChangeTitle('Start Framework');
-    }
-  }, [])
+
   return (
     <div className="flex-center h-screen">
+      <title>Contact</title>
       <Container>
         <div className='flex-center flex-col mt-16'>
           <Heading text='conatct section' color='dark' />
